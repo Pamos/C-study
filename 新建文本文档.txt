@@ -1,0 +1,77 @@
+﻿
+#day_01
+
+1.cd命令
+   这是一个非常基本，也是大家经常需要使用的命令，它用于切换当前目录，它的参数是要切换到的目录的路径，可以是绝对路径，也可以是相对路径。如：
+   cd /root/Docements # 切换到目录/root/Docements  
+   cd ./path          # 切换到当前目录下的path目录中，“.”表示当前目录    
+   cd ../path         # 切换到上层目录中的path目录中，“..”表示上一层目录  
+2.ls命令
+   这是一个非常有用的查看文件与目录的命令，list之意，它的参数非常多，下面就列出一些我常用的参数吧，如下：
+   -l ：列出长数据串，包含文件的属性与权限数据等  
+   -a ：列出全部的文件，连同隐藏文件（开头为.的文件）一起列出来（常用）  
+   -d ：仅列出目录本身，而不是列出目录的文件数据  
+   -h ：将文件容量以较易读的方式（GB，kB等）列出来  
+   -R ：连同子目录的内容一起列出（递归列出），等于该目录下的所有文件都会显示出来  
+   注：这些参数也可以组合使用，下面举两个例子：
+   ls -l #以长数据串的形式列出当前目录下的数据文件和目录  
+   ls -lR #以长数据串的形式列出当前目录下的所有文件
+3.mv [选项] 源文件或目录 目录或多个源文件 | 移动或重命名文件
+
+  -b  覆盖前做备份
+  -f  如存在不询问而强制覆盖
+  -i  如存在则询问是否覆盖
+  -u  较新才覆盖
+  -t  将多个源文件移动到统一目录下，目录参数在前，文件参数在后
+  eg:
+    mv a /tmp/ 将文件a移动到 /tmp目录下
+    mv a b 将a命名为b
+    mv /home/zenghao test1.txt test2.txt test3.txt
+4.scp [参数] [原路径] [目标路径] | 在Linux服务器之间复制文件和目录
+
+  -v  详细显示输出的具体情况
+  -r  递归复制整个目录
+  (1) 复制文件：  
+  命令格式：  
+  scp local_file remote_username@remote_ip:remote_folder  
+  或者  
+  scp local_file remote_username@remote_ip:remote_file  
+  或者  
+  scp local_file remote_ip:remote_folder  
+  或者  
+  scp local_file remote_ip:remote_file  
+  第1,2个指定了用户名，命令执行后需要输入用户密码，第1个仅指定了远程的目录，文件名字不变，第2个指定了文件名  
+  第3,4个没有指定用户名，命令执行后需要输入用户名和密码，第3个仅指定了远程的目录，文件名字不变，第4个指定了文件名   
+ (2) 复制目录：  
+  命令格式：  
+  scp -r local_folder remote_username@remote_ip:remote_folder  
+  或者  
+  scp -r local_folder remote_ip:remote_folder  
+  第1个指定了用户名，命令执行后需要输入用户密码；  
+  第2个没有指定用户名，命令执行后需要输入用户名和密码；
+  eg:
+    从 本地 复制到 远程
+    scp /home/daisy/full.tar.gz root@172.19.2.75:/home/root 
+    从 远程 复制到 本地
+    scp root@/172.19.2.75:/home/root/full.tar.gz /home/daisy/full.tar.gz
+5.rm [选项] 文件 | 删除文件
+
+  -r  删除文件夹
+  -f  删除不提示
+  -i  删除提示
+  -v  详细显示进行步骤
+6.touch [选项] 文件 | 创建空文件或更新文件时间
+
+  -a  只修改存取时间
+  -m  值修改变动时间
+  -r  eg:touch -r a b ,使b的时间和a相同
+  -t  指定特定的时间 eg:touch -t 201211142234.50 log.log 
+    -t time [[CC]YY]MMDDhhmm[.SS],C:年前两位
+7.pwd 查看当前所在路径
+8.cp [选项] 源文件或目录 目录或多个源文件 | 将源文件复制至目标文件，或将多个源文件复制至目标目录。
+
+  -r -R 递归复制该目录及其子目录内容
+  -p  连同档案属性一起复制过去
+  -f  不询问而强制复制
+  -s  生成快捷方式
+  -a  将档案的所有特性都一起复制 
