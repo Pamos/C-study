@@ -1,0 +1,11 @@
+[root@host ~]# cd caoqh
+[root@host caoqh]# vim hello.c
+vim hello.c
+#include<stdio.h>
+int main(){
+	printf("hello linux.");
+	return 0;
+}
+[root@host caoqh]# gcc-o hello hello.c
+[root@host caoqh]# ./hello
+hello linux.
