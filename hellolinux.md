@@ -5,12 +5,13 @@
 [root@host caoqh]# vim hello.c
 ```
 ### hello.c
+```
 #include<stdio.h>
 int main(){
 	printf("hello linux.");
 	return 0;
 }
-
+```
 ### 编译运行
 ```
 [root@host caoqh]# gcc-o hello hello.c
