@@ -6,7 +6,7 @@
 ----
 
 
-###code
+### code
 
 *#include <stdio.h>*
 
@@ -42,7 +42,7 @@
 
 ----
 
-###tips
+### tips
 
 
 1.getchar()函数是从键盘上读入字符，并带回显；
