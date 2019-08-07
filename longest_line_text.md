@@ -62,9 +62,17 @@ int main(int argc, char* argv[])
   }
 
   printf("\n\n**********************************\n");
-  printf("[+] the longest line number is %d\n", longest_line_num);
-  printf("[+] length is %d\n", longest_line_len);
-  printf("[+] content is:%s\n", longest_line);
+  if(longest_line_num == 0)
+  {
+    printf("[+] empty file.\n");
+  }
+  else
+  { 
+    printf("[+] the longest line number is %d\n", longest_line_num);
+    printf("[+] length is %d\n", longest_line_len);
+    printf("[+] content is:%s\n", longest_line);
+  }
+
 
   if(line)
   {
