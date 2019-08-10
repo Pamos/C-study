@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
   ssize_t longest_line_len = 0;
   char *longest_line = NULL;
 
-  if(argc == 1)
+  if(argc = 1)
   {
     printf("Usage:%s <filepath>\n", argv[0]);
     return -1;
