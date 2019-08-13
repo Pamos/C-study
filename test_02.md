@@ -31,5 +31,15 @@
 		}
 		return 0;
 	}
+	
+	
 		
-#网络不行  晚点传结果  :)
+###结果
+
+    [root@host ~]# cd caoqh
+    [root@host caoqh]# vim test_02.c
+    [root@host caoqh]# gcc -o test_02 test_02.c
+    [root@host caoqh]# ./test_02
+    请输入月份n:
+    5
+    第5个月的兔子数为5[root@host caoqh]# 
