@@ -1,6 +1,6 @@
-#C 语言实例 - 字符转 ASCII 码
+# C 语言实例 - 字符转 ASCII 码
 ----
-###code
+### code
 
 
 	#include<stdio.h>
@@ -18,7 +18,7 @@
 	}
 	
 	
-###运行
+### 运行
 	[root@host caoqh]# gcc -o test_05 test_05.c
 	[root@host caoqh]# ./test_05
 	请输入一个字符：a
