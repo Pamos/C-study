@@ -69,4 +69,8 @@ int puts(const char*)函数把字符串s和一个尾随的换行符写入到stdo
     /tmp/ccaE4pHz.o: In function `main':
     test.c:(.text+0x1d): warning: the `gets' function 
     is dangerous and should not be used.
-    
+----
+
+##    关于终止符 
+Windows 中是 Ctrl+z;
+Linux/Unix中是Ctrl+d;    
